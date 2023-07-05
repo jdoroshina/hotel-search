@@ -15,11 +15,109 @@
 			<h1 class="visually-hidden">Поиск отеля</h1>
 			<section class="housing-search__">
 				<h2 class="housing-search__form filters">Список отелей с фильтрами</h2>
-				<form class="filter" action="" method="get"></form>
+				<form class="filter" action="" method="get">
+					<fieldset class="filter__element">
+						<h3 class="filter__name">Страна</h3>
+						<label class="visually-hidden" for="search-field">Поисковая строка</label>
+						<input class="filter__input" id="search-field" type="search" name="country-search" placeholder="Поиск стран">
+						<ul class="">
+							<li class=""></li>
+						</ul>
+					</fieldset>
+					<fieldset class="filter__element">
+						<h3 class="filter__name">Тип</h3>
+						<ul class="">
+							<li class="">
+								<label class="filter__label filter__label--checks">
+									<input class="filter__input" type="checkbox" name="appartments" checked>
+									<span class="filter__value">Апартаменты</span>
+								</label>
+							</li>
+							<li class="">
+								<label class="filter__label filter__label--checks">
+									<input class="filter__input" type="checkbox" name="hotels">
+									<span class="filter__value">Отель</span>
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="filter__element">
+						<h3 class="filter__name">Количество звезд</h3>
+						<ul class="">
+							<li class="">
+								<label class="filter__label filter__label--checks">
+									<input class="filter__input" type="checkbox" name="one-star">
+									<span class="filter__value">1 звезда</span>
+								  </label>
+							</li>
+							<li class="">
+								<label class="filter__label filter__label--checks">
+									<input class="filter__input" type="checkbox" name="two-stars" checked>
+									<span class="filter__value">2 звезды</span>
+								</label>
+							</li>
+							<li class="">
+								<label class="filter__label filter__label--checks">
+									<input class="filter__input" type="checkbox" name="three-stars" checked>
+									<span class="filter__value">3 звезды</span>
+								</label>
+							</li>
+							<li class="">
+								<label class="filter__label filter__label--checks">
+									<input class="filter__input" type="checkbox" name="four-stars">
+									<span class="filter__value">4 звезды</span>
+								</label>
+							</li>
+							<li class="">
+								<label class="filter__label filter__label--checks">
+									<input class="filter__input" type="checkbox" name="five-stars">
+									<span class="filter__value">5 звезд</span>
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="filter__element">
+						<h3 class="filter__name">Количество отзывов (от)</h3>
+						<label class="filter__label filter__label--checks">
+							<input class="filter__input visually-hidden" type="text" name="feedbacks" placeholder="Например, от 10">
+							<span class="visually-hidden">Количество отзывов</span>
+						</label>
+					</fieldset>
+					<fieldset class="filter__item" aria-label="Фильтр по цене">
+						<h3 class="filter__name">Цена</h3>
+						<label class="filter__label">
+							<span class="visually-hidden">Минимальная цена</span>
+							<input class="filter__select" type="number" value="0" name="min-price" placeholder="от 0 ₽">
+						</label>
+						<label class="filter__label">
+							<span class="visually-hidden">Максимальная цена</span>
+							<input class="filter__select" type="number" value="100500" name="max-price" placeholder="до 100 500 ₽">
+						</label>
+						<div class="filter__slider">
+							<!-- Добавь слайдер -->
+						</div>
+					</fieldset>
+					<button class="form__submit btn">Применить фильтр</button>
+					<button class="form__reset btn">Очистить фильтр</button>
+				</form>
 				<div class="housing-search__container">
 					
 					<!-- Карточка средства размещения строится по шаблону #housing-card -->
-
+					<article class="housing">
+						  <h3 class="housing__name">Marina In</h3>
+						  <p class="housing__details">
+							  <span class="housing__detail housing__detail--star"></span>
+							  <span class="housing__detail housing__detail--type">Апартаменты</span>
+							  <span class="housing__detail housing__detail--feedbacks">23 отзыва</span>
+							  <span class="housing__detail housing__detail--country">Албания</span>
+						  </p>
+						  <p class="housing__price">
+							  4600<span class="">₽</span>
+							  <span class="housing__price-notice">Цена за 1 ночь</span>
+						  </p>
+						  <p class="housing__description">Этот 4-звездочный отель расположен в центре города. На его территории есть бассейн с терассой и сауна. Из номеров открывается вид на море.</p>
+						  <button class="housing__btn btn">Забронировать</button>
+					  </article>
 					<!--
 					При отсутствии данных (если пользователь применил жёсткие фильтры
 					или сервер вернул пустой массив данных) нужно отобразить данный контейнер.
