@@ -11,123 +11,125 @@
 		<link rel="preload" href="./fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 	</head>
 	<body class="page__body">
-		<main class="housing-search">
+		<main class="housing">
 			<h1 class="visually-hidden">Поиск отеля</h1>
-			<section class="housing-search__">
-				<h2 class="housing-search__form filters">Список отелей с фильтрами</h2>
-				<form class="filter" action="" method="get">
-					<fieldset class="filter__element">
-						<h3 class="filter__name">Страна</h3>
-						<label class="visually-hidden" for="search-field">Поисковая строка</label>
-						<input class="filter__input" id="search-field" type="search" name="country-search" placeholder="Поиск стран">
-						<ul class="">
-							<li class=""></li>
-						</ul>
-					</fieldset>
-					<fieldset class="filter__element">
-						<h3 class="filter__name">Тип</h3>
-						<ul class="">
-							<li class="">
-								<label class="filter__label filter__label--checks">
-									<input class="filter__input" type="checkbox" name="appartments" checked>
-									<span class="filter__value">Апартаменты</span>
-								</label>
-							</li>
-							<li class="">
-								<label class="filter__label filter__label--checks">
-									<input class="filter__input" type="checkbox" name="hotels">
-									<span class="filter__value">Отель</span>
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-					<fieldset class="filter__element">
-						<h3 class="filter__name">Количество звезд</h3>
-						<ul class="">
-							<li class="">
-								<label class="filter__label filter__label--checks">
-									<input class="filter__input" type="checkbox" name="one-star">
-									<span class="filter__value">1 звезда</span>
-								  </label>
-							</li>
-							<li class="">
-								<label class="filter__label filter__label--checks">
-									<input class="filter__input" type="checkbox" name="two-stars" checked>
-									<span class="filter__value">2 звезды</span>
-								</label>
-							</li>
-							<li class="">
-								<label class="filter__label filter__label--checks">
-									<input class="filter__input" type="checkbox" name="three-stars" checked>
-									<span class="filter__value">3 звезды</span>
-								</label>
-							</li>
-							<li class="">
-								<label class="filter__label filter__label--checks">
-									<input class="filter__input" type="checkbox" name="four-stars">
-									<span class="filter__value">4 звезды</span>
-								</label>
-							</li>
-							<li class="">
-								<label class="filter__label filter__label--checks">
-									<input class="filter__input" type="checkbox" name="five-stars">
-									<span class="filter__value">5 звезд</span>
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-					<fieldset class="filter__element">
-						<h3 class="filter__name">Количество отзывов (от)</h3>
-						<label class="filter__label filter__label--checks">
-							<input class="filter__input visually-hidden" type="text" name="feedbacks" placeholder="Например, от 10">
-							<span class="visually-hidden">Количество отзывов</span>
-						</label>
-					</fieldset>
-					<fieldset class="filter__item" aria-label="Фильтр по цене">
-						<h3 class="filter__name">Цена</h3>
-						<label class="filter__label">
-							<span class="visually-hidden">Минимальная цена</span>
-							<input class="filter__select" type="number" value="0" name="min-price" placeholder="от 0 ₽">
-						</label>
-						<label class="filter__label">
-							<span class="visually-hidden">Максимальная цена</span>
-							<input class="filter__select" type="number" value="100500" name="max-price" placeholder="до 100 500 ₽">
-						</label>
-						<div class="filter__slider">
-							<!-- Добавь слайдер -->
-						</div>
-					</fieldset>
-					<button class="form__submit btn">Применить фильтр</button>
-					<button class="form__reset btn">Очистить фильтр</button>
-				</form>
-				<div class="housing-search__container">
-					
+			<section class="housing-search">
+				<div class="housing-search__filters">
+					<h2 class="visually-hidden">Фильтры</h2>
+					<form class="housing-search__form filter" action="#" method="get">
+						<fieldset class="filter__element">
+							<legend class="filter__name">Страна</legend>
+							<label class="visually-hidden" for="search-field">Поисковая строка</label>
+							<input class="filter__input" id="search-field" type="search" name="country-search" placeholder="Поиск стран">
+							<ul class="filter_list">
+								<li class="filter_item"></li>
+							</ul>
+						</fieldset>
+						<fieldset class="filter__element">
+							<legend class="filter__name">Тип</legend>
+							<ul class="filter_list">
+								<li class="filter_item">
+									<label class="filter__label filter__label--checks">
+										<input class="filter__input" type="checkbox" name="appartments" checked>
+										<span class="filter__value">Апартаменты</span>
+									</label>
+								</li>
+								<li class="filter_item">
+									<label class="filter__label filter__label--checks">
+										<input class="filter__input" type="checkbox" name="hotels">
+										<span class="filter__value">Отель</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="filter__element">
+							<legend class="filter__name">Количество звезд</legend>
+							<ul class="filter_list">
+								<li class="filter_item">
+									<label class="filter__label filter__label--checks">
+										<input class="filter__input" type="checkbox" name="one-star">
+										<span class="filter__value">1 звезда</span>
+									</label>
+								</li>
+								<li class="filter_item">
+									<label class="filter__label filter__label--checks">
+										<input class="filter__input" type="checkbox" name="two-stars" checked>
+										<span class="filter__value">2 звезды</span>
+									</label>
+								</li>
+								<li class="filter_item">
+									<label class="filter__label filter__label--checks">
+										<input class="filter__input" type="checkbox" name="three-stars" checked>
+										<span class="filter__value">3 звезды</span>
+									</label>
+								</li>
+								<li class="filter_item">
+									<label class="filter__label filter__label--checks">
+										<input class="filter__input" type="checkbox" name="four-stars">
+										<span class="filter__value">4 звезды</span>
+									</label>
+								</li>
+								<li class="filter_item">
+									<label class="filter__label filter__label--checks">
+										<input class="filter__input" type="checkbox" name="five-stars">
+										<span class="filter__value">5 звезд</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="filter__element">
+							<legend class="filter__name">Количество отзывов (от)</legend>
+							<label class="filter__label filter__label--checks">
+								<input class="filter__input visually-hidden" type="text" name="feedbacks" placeholder="Например, от 10">
+								<span class="visually-hidden">Количество отзывов</span>
+							</label>
+						</fieldset>
+						<fieldset class="filter__item" aria-label="Фильтр по цене">
+							<legend class="filter__name">Цена</legend>
+							<label class="filter__label">
+								<span class="visually-hidden">Минимальная цена</span>
+								<input class="filter__select" type="number" value="0" name="min-price" placeholder="от 0 ₽">
+							</label>
+							<label class="filter__label">
+								<span class="visually-hidden">Максимальная цена</span>
+								<input class="filter__select" type="number" value="100500" name="max-price" placeholder="до 100 500 ₽">
+							</label>
+							<div class="filter__slider">
+								<!-- Добавь слайдер -->
+							</div>
+						</fieldset>
+						<button class="housing-search__form-submit btn">Применить фильтр</button>
+						<button class="housing-search__form-reset btn">Очистить фильтр</button>
+					</form>
+				</div>
+				<div class="housing-search__catalog catalog">
+					<h2 class="visually-hidden">Отели</h2>
 					<!-- Карточка средства размещения строится по шаблону #housing-card -->
-					<article class="housing">
-						  <h3 class="housing__name">Marina In</h3>
-						  <p class="housing__details">
-							  <span class="housing__detail housing__detail--star"></span>
-							  <span class="housing__detail housing__detail--type">Апартаменты</span>
-							  <span class="housing__detail housing__detail--feedbacks">23 отзыва</span>
-							  <span class="housing__detail housing__detail--country">Албания</span>
-						  </p>
-						  <p class="housing__price">
-							  4600<span class="">₽</span>
-							  <span class="housing__price-notice">Цена за 1 ночь</span>
-						  </p>
-						  <p class="housing__description">Этот 4-звездочный отель расположен в центре города. На его территории есть бассейн с терассой и сауна. Из номеров открывается вид на море.</p>
-						  <button class="housing__btn btn">Забронировать</button>
-					  </article>
+					<article class="catalog__housing housing">
+						<h3 class="housing__name">Marina In</h3>
+						<p class="housing__details">
+							<span class="housing__detail housing__detail--star"></span>
+							<span class="housing__detail housing__detail--type">Апартаменты</span>
+							<span class="housing__detail housing__detail--feedbacks">23 отзыва</span>
+							<span class="housing__detail housing__detail--country">Албания</span>
+						</p>
+						<p class="housing__price">
+							4600<span class="">₽</span>
+							<span class="housing__price-notice">Цена за 1 ночь</span>
+						</p>
+						<p class="housing__description">Этот 4-звездочный отель расположен в центре города. На его территории есть бассейн с терассой и сауна. Из номеров открывается вид на море.</p>
+						<button class="housing__btn btn">Забронировать</button>
+					</article>
 					<!--
 					При отсутствии данных (если пользователь применил жёсткие фильтры
 					или сервер вернул пустой массив данных) нужно отобразить данный контейнер.
 					-->
-					<div class="container container--lightbackground" style="display: none">
+					<div class="catalog__message-container" style="display: none">
 						<div class="message message--noresults"><span class="message__icon">
 								<svg width="60" height="60" aria-hidden="true">
 									<use xlink:href="#icon-no-results"></use>
 								</svg></span>
-							<h3 class="message__title">По данным параметрам ничего не найдено</h3>
+							<h2 class="message__title">По данным параметрам ничего не найдено</h2>
 							<p class="message__paragraph">Попробуйте изменить параметры фильтрации
 								или вернуться в общий каталог</p>
 							<button class="message__button btn">Очистить фильтр</button>
@@ -160,8 +162,8 @@
 
 		<template id="housing-card">
 			<article class="housing">
-			  {# <img src="img/avatars/user01.png" class="housing__avatar" width="70" height="70" alt="Аватар пользователя"> #}
-				<h3 class="housing__name">Marina In</h3>
+			{# <img src="img/avatars/user01.png" class="housing__avatar" width="70" height="70" alt="Аватар пользователя"> #}
+				<h2 class="housing__name">Marina In</h2>
 				<p class="housing__details">
 					<span class="housing__detail housing__detail--star"></span>
 					<span class="housing__detail housing__detail--type">Апартаменты</span>
@@ -175,6 +177,6 @@
 				<p class="housing__description">Этот 4-звездочный отель расположен в центре города. На его территории есть бассейн с терассой и сауна. Из номеров открывается вид на море.</p>
 				<button class="housing__btn btn">Забронировать</button>
 			</article>
-		  </template>
+		</template>
 	</body>
 </html>
